@@ -1,28 +1,36 @@
 (function () {
- 
-  window.onresize = function () {
-    var offWidth = window.screen.width / 30; //这里用宽度/30表示1rem取得的px
-    document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
-  }
-  window.onresize();
-  //浮动标题
   $(":text").keyup(function (element) {
     var root = $(this),
       title = root.attr("placeholder"),
       id = root.attr("id"),
-      titleId = id+"title",
-      model = '<div id="'+titleId+'" class="input-text-title animated bounce">'+title+'</div>',
+      titleId = id + "title",
+      model = '<div id="' + titleId + '" class="input-text-title animated bounce">' + title + '</div>',
       val = root.val();
     if (val == null || val == "") {
-      
+
     } else {
       if (!document.getElementById(titleId)) {
-        root.after(model);
+        root.before(model);
       }
     }
-    
-    
-
   });
   $('[data-toggle="tooltip"]').tooltip()
 } ())
+
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      if (clientWidth >= 640) {
+        docEl.style.fontSize = '100px';
+      } else {
+        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+      }
+    };
+
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
