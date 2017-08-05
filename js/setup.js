@@ -1,4 +1,10 @@
 (function () {
+ 
+  window.onresize = function () {
+    var offWidth = window.screen.width / 30; //这里用宽度/30表示1rem取得的px
+    document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
+  }
+  window.onresize();
   //浮动标题
   $(":text").keyup(function (element) {
     var root = $(this),
