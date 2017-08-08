@@ -158,7 +158,7 @@
 									<span class="input-group-addon ">
                   <input type="checkbox" >
                 </span>
-									<input id="totalPumping" type="text" class="form-control" placeholder="梭哈闲赢抽水" data-toggle="tooltip" data-placement="bottom"
+									<input id="idleWinPumping" type="text" class="form-control" placeholder="梭哈闲赢抽水" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字，按百分比抽水">
 								</div>
 							</div>
@@ -168,20 +168,20 @@
 									<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-									<input id="profitPumping" type="text" class="form-control" placeholder="本局暗扣" data-toggle="tooltip" data-placement="bottom"
+									<input id="hiddenDeduct" type="text" class="form-control" placeholder="本局暗扣" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字，按元暗扣">
 								</div>
 							</div>
 
 							<div class="col-xs-12 col-md-12">
 								<input type="checkbox">
-								<span class="context-title">
+								<span class="context-title" id="peoplePumping">
                   人头抽水(设置如下)
                 </span>
 							</div>
 							<div class="col-xs-5 col-md-5">
 								<div class="input-group">
-									<input id="totalPumping" type="text" class="form-control" placeholder="人数" data-toggle="tooltip" data-placement="bottom"
+									<input id="peoplePumping-count" type="text" class="form-control" placeholder="人数" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字">
 								</div>
 							</div>
@@ -191,17 +191,17 @@
 							<div class="col-xs-5 col-md-5">
 
 								<div class="input-group">
-									<input id="totalPumping" type="text" class="form-control" placeholder="金额" data-toggle="tooltip" data-placement="bottom"
+									<input id="peoplePumping-money" type="text" class="form-control" placeholder="金额" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字">
 								</div>
 							</div>
 
 							<div class="col-xs-12 col-md-12">
-								<span class="context-title">红包费用(设置如下)</span>
+								<span class="context-title" id="redPacketMoney">红包费用(设置如下)</span>
 							</div>
 							<div class="col-xs-5 col-md-5">
 								<div class="input-group">
-									<input id="totalPumping" type="text" class="form-control" placeholder="人数" data-toggle="tooltip" data-placement="bottom"
+									<input id="redPacketMoney-count" type="text" class="form-control" placeholder="人数" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字">
 								</div>
 							</div>
@@ -210,7 +210,7 @@
 							</div>
 							<div class="col-xs-5 col-md-5">
 								<div class="input-group">
-									<input id="totalPumping" type="text" class="form-control" placeholder="金额" data-toggle="tooltip" data-placement="bottom"
+									<input id="redPacketMoney-money" type="text" class="form-control" placeholder="金额" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字">
 								</div>
 							</div>
@@ -232,7 +232,7 @@
 							<div class="col-xs-12 col-md-12">
 
 								<div class="input-group">
-									<input id="totalPumping" type="text" class="form-control" placeholder="财务费用" data-toggle="tooltip" data-placement="bottom"
+									<input id="financeCharges" type="text" class="form-control" placeholder="财务费用" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字，单位元">
 								</div>
 							</div>
@@ -250,7 +250,7 @@
 							<div class="col-xs-12 col-md-6">
 
 								<div class="input-group">
-									<input id="totalPumping" type="text" class="form-control" placeholder="抢红包限时" data-toggle="tooltip" data-placement="bottom"
+									<input id="grabRedPacketTimed" type="text" class="form-control" placeholder="抢红包限时" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字，单位为秒数">
 								</div>
 							</div>
@@ -293,7 +293,7 @@
 									<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-									<input id="totalPumping" type="text" class="form-control" placeholder="玩家积分" data-toggle="tooltip" data-placement="bottom"
+									<input id="playerScore" type="text" class="form-control" placeholder="玩家积分" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字比例，按百分比">
 								</div>
 							</div>
@@ -303,7 +303,7 @@
 									<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-									<input id="totalPumping" type="text" class="form-control" placeholder="庄家积分" data-toggle="tooltip" data-placement="bottom"
+									<input id="bankerScore" type="text" class="form-control" placeholder="庄家积分" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字比例，按玩百分比">
 								</div>
 							</div>
@@ -313,7 +313,7 @@
 									<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-									<input id="totalPumping" type="text" class="form-control" placeholder="最低押注" data-toggle="tooltip" data-placement="bottom"
+									<input id="minimumBet" type="text" class="form-control" placeholder="最低押注" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字，玩家押注必须高于此分数">
 								</div>
 							</div>
@@ -323,7 +323,7 @@
 									<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-									<input id="totalPumping" type="text" class="form-control" placeholder="最高押注" data-toggle="tooltip" data-placement="bottom"
+									<input id="maximalBet" type="text" class="form-control" placeholder="最高押注" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字，玩家将最多只能押注此分数">
 								</div>
 							</div>
@@ -333,7 +333,7 @@
 									<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-									<input id="totalPumping" type="text" class="form-control" placeholder="最低梭哈" data-toggle="tooltip" data-placement="bottom"
+									<input id="minimumStud" type="text" class="form-control" placeholder="最低梭哈" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字，玩家积分低于此分数梭哈无效">
 								</div>
 							</div>
@@ -343,20 +343,22 @@
 									<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-									<input id="totalPumping" type="text" class="form-control" placeholder="闲家梭哈" data-toggle="tooltip" data-placement="bottom"
-										title="请输入数字，限制闲家梭哈最高积分为庄家积分的百分比">
+									<input id="maximalStud" type="text" class="form-control" placeholder="最高梭哈" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，限制梭哈最高积分为此积分值">
 								</div>
 							</div>
-
+							
 							<div class="col-xs-12 col-md-6">
 								<div class="input-group">
 									<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-									<input id="totalPumping" type="text" class="form-control" placeholder="最高梭哈" data-toggle="tooltip" data-placement="bottom"
-										title="请输入数字，限制梭哈最高积分为此积分值">
+									<input id="playerStud" type="text" class="form-control" placeholder="闲家梭哈" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，限制闲家梭哈最高积分为庄家积分的百分比">
 								</div>
 							</div>
+
+							
 
 						</div>
 					</div>
@@ -412,7 +414,7 @@
 
 							<div class="col-xs-12 col-md-12">
 								<div class="input-group">
-									<input id="totalPumping" type="text" class="form-control" placeholder="庄吃闲" data-toggle="tooltip" data-placement="bottom"
+									<input id="BankerEatIdle" type="text" class="form-control" placeholder="庄吃闲" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字，庄闲同点，小于等于此点数庄吃闲">
 								</div>
 							</div>
@@ -420,12 +422,12 @@
 
 
 							<div class="col-xs-12 col-md-12">
-								<span class="context-title">同点同金额，庄吃闲（包含）</span>
+								<span class="context-title" id="samePointAmount">同点同金额，庄吃闲（包含）</span>
 							</div>
 							<div class="col-xs-5 col-md-5">
 
 								<div class="input-group">
-									<input id="totalPumping" type="text" class="form-control" placeholder="人数" data-toggle="tooltip" data-placement="bottom"
+									<input id="samePointAmount-count" type="text" class="form-control" placeholder="人数" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字">
 								</div>
 							</div>
@@ -435,7 +437,7 @@
 							<div class="col-xs-5 col-md-5">
 
 								<div class="input-group">
-									<input id="totalPumping" type="text" class="form-control" placeholder="金额" data-toggle="tooltip" data-placement="bottom"
+									<input id="samePointAmount-money" type="text" class="form-control" placeholder="金额" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字">
 								</div>
 							</div>
@@ -504,7 +506,7 @@
 								<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-								<input id="totalPumping" type="text" class="form-control" placeholder="闲家自杀" data-toggle="tooltip" data-placement="bottom"
+								<input id="playerSuicide" type="text" class="form-control" placeholder="闲家自杀" data-toggle="tooltip" data-placement="bottom"
 									title="请输入数字，闲家低于此点数，为自杀">
 							</div>
 						</div>
@@ -514,7 +516,7 @@
 								<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-								<input id="totalPumping" type="text" class="form-control" placeholder="比大小" data-toggle="tooltip" data-placement="bottom"
+								<input id="thanSize" type="text" class="form-control" placeholder="比大小" data-toggle="tooltip" data-placement="bottom"
 									title="请输入数字，闲家低于等于此分数判输">
 							</div>
 						</div>
@@ -524,7 +526,7 @@
 								<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-								<input id="totalPumping" type="text" class="form-control" placeholder="庄平赔" data-toggle="tooltip" data-placement="bottom"
+								<input id="bankerFlatCompensate" type="text" class="form-control" placeholder="庄平赔" data-toggle="tooltip" data-placement="bottom"
 									title="请输入数字，庄家给搜哈闲家赔付此百分比">
 							</div>
 						</div>
@@ -604,7 +606,7 @@
 									<span class="input-group-addon">
                   <input type="checkbox" >
                 </span>
-									<input id="totalPumping" type="text" class="form-control" placeholder="抢包固定押注" data-toggle="tooltip" data-placement="bottom"
+									<input id="grabBagFixedBet" type="text" class="form-control" placeholder="抢包固定押注" data-toggle="tooltip" data-placement="bottom"
 										title="请输入数字，设置抢包固定押注">
 								</div>
 							</div>
@@ -635,7 +637,6 @@
                   超时按照赔率赔付；同时超时，闲家跑路；
                 </span>
 							</div>
-
 						</div>
 					</div>
 				</div>
