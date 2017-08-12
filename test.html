@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<style>
+.table .row .table-th {
+  float: left;
+  border: 1px solid red;
+  border-left: none;
+} 
+.table .row .table-td {
+  float: left;
+  border: 1px solid red;
+  border-top: none;
+  border-left: none;
+} 
+.table>.table-row:hover {
+    background-color: #f5f5f5;
+}
+.table .row .table-first-th {
+  border-left: 1px solid red;
+}
+.table .row .table-first-td {
+  border-left: 1px solid red;
+}
+</style>
+
+</head>
+<body>
+  <div class="container">
+<div id="search" style="display: none;">
+  <input type="text">
+  <button>搜索</button>
+  
+</div>
+<div>
+
+<div style="float: right;">
+  <div style=" position: relative; top: 2.5rem; right: 0.5rem; padding-right: 0.3rem; padding-left: 0.3rem;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></div>
+</div>  
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <div>asd</div>
+    <th>AS</th> 
+    <th>SD</th>
+    <th>SD</th>
+  </tr>
+  </thead>
+  <tr>
+    <td>12</td>
+    <td>23</td>
+    <td>33<div>asd</div></td>
+  </tr> 
+  <tr>
+    <td>12</td>
+    <td>23</td>
+    <td>33</td>
+  </tr>
+</table>
+</div>
+<table id="table1" class="table table-bordered table-hover"></table>
+<!--<div class="table">
+  <div class="row">
+    <div class="table-th table-first-th">1</div>
+    <div class="table-th">2</div>
+    <div class="table-th">2</div>
+  </div>
+  <div class="row table-row">
+    <div class="table-td table-first-td">s</div>
+    <div class="table-td">s</div>
+    <div class="table-td">s</div>
+    <div>asd</div>
+  </div>
+</div>
+</div>-->
+
+
+
+
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="test.js"></script>
+</html>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="model_close_btn" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="model_save_btn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

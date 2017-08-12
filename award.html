@@ -37,15 +37,16 @@
 
 					<div style="col-xs-8 col-md-8">
 						<ul class="nav navbar-nav">
-							<li><a href="#">成员积分</a>
-								<p style="border-top: 1px solid white; width: 18px; margin: auto; margin-top: -11px;">
-								</p>
+							<li><a href="index.html">成员积分</a>
 							</li>
 							<li class="click">
 								<a href="setup.html">玩法设置</a>
 							</li>
 							<li><a href="stats.html">财务统计</a></li>
-							<li><a href="award.html">积分奖励</a></li>
+							<li><a href="#">积分奖励</a>
+								<p style="border-top: 1px solid white; width: 18px; margin: auto; margin-top: -11px;">
+								</p>
+							</li>
 							<li><a href="jackpot.html">奖池</a></li>
 						</ul>
 					</div>
@@ -62,55 +63,97 @@
 
 				<div class="panel panel-default">
 					<!-- Default panel contents -->
-					<div class="panel-heading">玩家
+					<div class="panel-heading">押注条件
 						<span class="panel-heading-up">
 							<span class="glyphicon glyphicon-chevron-up" style=" " aria-hidden="true"></span>
 						</span>
 					</div>
 					<div class="panel-body panel-body-up">
 
-						<div class="input-group">
-							<input id="searchName" type="text" class="form-control" placeholder="搜索" data-toggle="tooltip" data-placement="bottom" title="请输入名称，模糊查询">
+						<div class="col-xs-12 col-md-12">
+							<input type="checkbox">
+							<span class="context-title" id="peoplePumping">
+                  押注条件(设置如下)
+                </span>
 						</div>
-						<div style="overflow:auto;width:100%;max-height: 200px;">
-							<table class="table table-hover" id="ruleOne">
-							</table>
+						<div class="col-xs-5 col-md-5">
+							<div class="input-group">
+								<input id="peoplePumping-count" type="text" class="form-control" placeholder="押注" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，限制押注务必大于此值">
+							</div>
+						</div>
+						<div class="col-xs-1 col-md-2">
+							<span class="context-text">×</span>
+						</div>
+						<div class="col-xs-5 col-md-5">
+
+							<div class="input-group">
+								<input id="peoplePumping-money" type="text" class="form-control" placeholder="梭哈" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，限制梭哈务必大于此值">
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="panel panel-default" style="width: 100%;">
 					<!-- Default panel contents -->
-					<div class="panel-heading">玩家管理
+					<div class="panel-heading">奖励设置
 						<span class="panel-heading-down">
 							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
 						</span>
 					</div>
 					<div class="panel-body panel-body-down">
-						<div class="col-xs-6 col-md-4">
-							<button class="btn btn-default" type="submit">获取成员</button>
+						<div class="col-xs-12 col-md-12">
+							<label>
+								<input type="checkbox" />
+								<span class="context-title">开启积分奖励模式(不开启时不计算奖励)</span>
+								</label>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<label>
+								<input type="checkbox" />
+								<span class="context-title">自动采集中奖玩家数据</span>
+								</label>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<label>
+								<input type="checkbox" />
+								<span class="context-title">包括庄家</span>
+								</label>
+						</div>
+						<div class="col-xs-12 col-md-12">
+							<button class="btn btn-default" type="submit">保存设置</button>
+              <div class="cutLine" style="margin-top: 30px;"></div>
 						</div>
 
-						<div class="col-xs-6 col-md-4">
-							<button class="btn btn-default" type="submit">新增成员</button>
-						</div>
-						<div class="col-xs-6 col-md-4">
-							<button class="btn btn-default" type="submit">清空0分玩家</button>
+						
+
+						<div style="overflow:auto;width:100%;max-height: 200px;">
+							<table class="table table-hover" id="awardList">
+							</table>
 						</div>
 					</div>
 				</div>
 
-				<div class="panel panel-default">
+
+				<div class="panel panel-default" style="width: 100%;">
 					<!-- Default panel contents -->
-					<div class="panel-heading">备注设置
+					<div class="panel-heading">添加与兑奖
 						<span class="panel-heading-down">
 							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
 						</span>
 					</div>
 					<div class="panel-body panel-body-down">
-						<div style="overflow:auto;width:100%;max-height: 200px;">
-							<table class="table table-hover" id="remark">
-							</table>
+						<div class="col-xs-12 col-md-6">
+							<input id="peoplePumping-money" type="text" class="form-control" placeholder="玩家昵称" data-toggle="tooltip" data-placement="bottom"
+								title="请输入玩家昵称">
+						</div>
+            <div class="col-xs-12 col-md-6">
+							<input id="peoplePumping-money" type="text" class="form-control" placeholder="增减积分" data-toggle="tooltip" data-placement="bottom"
+								title="请输入数字">
+						</div>
+						<div class="col-xs-12 col-md-12">
+							<button class="btn btn-default" type="submit">手动增加奖励/兑奖</button>
 						</div>
 					</div>
 				</div>
@@ -119,63 +162,33 @@
 
 			<div class="col-xs-12 col-md-6">
 				<div class="panel panel-default">
-					<div class="panel-heading">记录信息
+					<div class="panel-heading">玩家奖励
 						<span class="panel-heading-down">
 							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
 						</span>
 					</div>
 					<div class="panel-body panel-body-down">
-
-						<div style="overflow:auto;width:100%;max-height: 200px;">
-							<table class="table table-hover" id="ruleTree">
+            
+						<div class="input-group">
+							<input id="searchName" type="text" class="form-control" placeholder="搜索" data-toggle="tooltip" data-placement="bottom" title="请输入名称，模糊查询">
+						</div>
+            <div style="overflow:auto;width:100%;max-height: 200px;">
+							<table class="table table-hover" id="playerAwardIntegral">
 							</table>
 						</div>
-						<div class="cutLine" style="margin-top: 30px"></div>
-						<div style="overflow:auto;width:100%;max-height: 200px;">
-							<table class="table table-hover" id="bankerRecord">
+            <div class="cutLine"></div>
+            <div style="overflow:auto;width:100%;max-height: 200px;">
+							<table class="table table-hover" id="redeem">
 							</table>
 						</div>
-
-						<div class="cutLine" style="margin-top: 5px"></div>
-						<div class="col-xs-12 col-md-6">
-							<span>玩家现分数:</span>
-							<span>0</span>
-						</div>
-						<div class="col-xs-12 col-md-6">
-							<span>现分数+庄:</span>
-							<span>0</span>
-						</div>
-						<div class="col-xs-12 col-md-6">
-							<span>玩家总积分:</span>
-							<span>0</span>
-						</div>
-						<div class="col-xs-12 col-md-6">
-							<span>总积分+庄:</span>
-							<span>0</span>
+            <div class="cutLine"></div>
+            <div style="overflow:auto;width:100%;max-height: 200px;">
+							<table class="table table-hover" id="playerAwardIntegralDetail">
+							</table>
 						</div>
 					</div>
 				</div>
 
-				<div class="panel panel-default" style="width: 100%;">
-					<!-- Default panel contents -->
-					<div class="panel-heading">记录管理
-						<span class="panel-heading-down">
-							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
-						</span>
-					</div>
-					<div class="panel-body panel-body-down">
-						<div class="col-xs-6 col-md-4">
-							<button class="btn btn-default" type="submit">恢复到本局</button>
-						</div>
-
-						<div class="col-xs-6 col-md-4">
-							<button class="btn btn-default" type="submit">刷新记录</button>
-						</div>
-						<div class="col-xs-6 col-md-4">
-							<button class="btn btn-default" type="submit">清理上下分记录</button>
-						</div>
-					</div>
-				</div>
 
 			</div>
 		</div>
@@ -218,6 +231,6 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/member.js"></script>
+<script src="js/award.js"></script>
 
 </html>

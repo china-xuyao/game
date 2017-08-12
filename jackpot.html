@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
+	<title>欢迎来到游戏中心---玩法设置</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-theme.css" />
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/main.css" />
+	<!--<link rel="stylesheet/less" type="text/css" href="main.less" />-->
+
+</head>
+
+<body>
+
+	<hander>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" style="background-color: white;" data-target="#bs-example-navbar-collapse-1"
+						ng-click="vm.btn_top_show()">  
+						
+            <span class="sr-only">Toggle navigation</span>  
+            <span class="icon-bar"></span>  
+            <span class="icon-bar"></span>  	
+            <span class="icon-bar"></span>
+          </button>
+					<!--<a class="navbar-brand" href="#">Brand</a>-->
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+					<div style="col-xs-8 col-md-8">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">成员积分</a>
+							</li>
+							<li class="click">
+								<a href="setup.html">玩法设置</a>
+							</li>
+							<li><a href="stats.html">财务统计</a></li>
+							<li><a href="award.html">积分奖励</a>
+							</li>
+							<li><a href="#">奖池</a>
+								<p style="border-top: 1px solid white; width: 18px; margin: auto; margin-top: -11px;">
+								</p>
+							</li>
+						</ul>
+					</div>
+
+
+				</div>
+			</div>
+		</nav>
+	</hander>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">奖池
+						<span class="panel-heading-up">
+							<span class="glyphicon glyphicon-chevron-up" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-up">
+						<div style="overflow:auto;width:100%;max-height: 200px;">
+							<table class="table table-hover" id="jackpot_table">
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default" style="width: 100%;">
+					<!-- Default panel contents -->
+					<div class="panel-heading">奖池设置
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+						<div class="col-xs-12 col-md-12">
+							<span class="context-title" id="peoplePumping">
+                  闲家MVP(设置如下)
+                </span>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<div class="input-group">
+								<input id="peoplePumping-count" type="text" class="form-control" placeholder="下注下限" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，下注下限">
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<div class="input-group">
+								<input id="peoplePumping-money" type="text" class="form-control" placeholder="下注上限" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，下注上限">
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<div class="input-group">
+								<input id="peoplePumping-money" type="text" class="form-control" placeholder="奖励" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，奖励">
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<div class="input-group">
+								<input id="peoplePumping-count" type="text" class="form-control" placeholder="下注下限" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，下注下限">
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<div class="input-group">
+								<input id="peoplePumping-money" type="text" class="form-control" placeholder="下注上限" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，下注上限">
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<div class="input-group">
+								<input id="peoplePumping-money" type="text" class="form-control" placeholder="奖励" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，奖励">
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<div class="input-group">
+								<input id="peoplePumping-count" type="text" class="form-control" placeholder="下注下限" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，下注下限">
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<div class="input-group">
+								<input id="peoplePumping-money" type="text" class="form-control" placeholder="下注上限" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，下注上限">
+							</div>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<div class="input-group">
+								<input id="peoplePumping-money" type="text" class="form-control" placeholder="奖励" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，奖励">
+							</div>
+						</div>
+
+						<div class="cutLine"></div>
+
+						<div class="col-xs-12 col-md-6">
+							<div class="input-group">
+								<span class="input-group-addon">
+                  <input type="radio" name="drawType_radio" >
+                </span>
+								<input id="profitPumping" type="text" class="form-control" placeholder="按固定抽水" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，按固定值">
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							<div class="input-group">
+								<span class="input-group-addon">
+                  <input type="radio" name="drawType_radio" >
+                </span>
+								<input id="profitPumping" type="text" class="form-control" placeholder="按比例抽水" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，按百分比抽水">
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-12">
+							<label>
+							<input type="radio" name="drawType_radio">
+							<span class="context-title">
+                  不抽水
+              </span>
+							</label>
+						</div>
+
+						<div class="cutLine"></div>
+
+						<div class="col-xs-12 col-md-6">
+							<label>
+							<input type="checkbox" name="drawType_radio">
+							<span class="context-title">
+                  开启奖池模式
+              </span>
+							</label>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							<label>
+							<input type="checkbox" name="drawType_radio">
+							<span class="context-title">
+                  开启MVP
+              </span>
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-12">
+							<input id="playerStud" type="text" class="form-control" placeholder="奖池初始金额" data-toggle="tooltip" data-placement="bottom"
+								title="请输入数字，奖池初始金额">
+						</div>
+						<div class="col-xs-12 col-md-12">
+							<button class="btn btn-default" type="submit">保存设置</button>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="col-xs-12 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">中奖信息
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+
+						<div style="overflow:auto;width:100%;max-height: 200px;">
+							<table class="table table-hover" id="winPrizeInfo">
+							</table>
+						</div>
+						<div class="cutLine"></div>
+						<div class="col-xs-12 col-md-6">
+							<span>中奖金额:</span>
+							<span>0</span>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+
+
+	</div>
+
+	</div>
+
+	<div>
+
+	</div>
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" id="model_close_btn" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" id="model_save_btn">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jackpot.js"></script>
+
+</html>

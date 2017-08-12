@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
+	<title>欢迎来到游戏中心---玩法设置</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-theme.css" />
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/main.css" />
+	<!--<link rel="stylesheet/less" type="text/css" href="main.less" />-->
+
+</head>
+
+<body>
+
+	<hander>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" style="background-color: white;" data-target="#bs-example-navbar-collapse-1"
+						ng-click="vm.btn_top_show()">  
+						
+            <span class="sr-only">Toggle navigation</span>  
+            <span class="icon-bar"></span>  
+            <span class="icon-bar"></span>  	
+            <span class="icon-bar"></span>
+          </button>
+					<!--<a class="navbar-brand" href="#">Brand</a>-->
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+					<div style="col-xs-8 col-md-8">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">成员积分</a>
+							</li>
+							<li class="click">
+								<a href="setup.html">玩法设置</a>
+							</li>
+							<li><a href="#">财务统计</a>
+								<p style="border-top: 1px solid white; width: 18px; margin: auto; margin-top: -11px;">
+								</p>
+							</li>
+							<li><a href="award.html">积分奖励</a></li>
+							<li><a href="jackpot.html">奖池</a></li>
+						</ul>
+					</div>
+
+
+				</div>
+			</div>
+		</nav>
+	</hander>
+	<div class="container">
+		<div class="row">
+			<!--设置规则一模块-->
+
+			<div class="panel panel-default">
+				<!-- Default panel contents -->
+				<div class="panel-heading">财务统计报表
+					<span class="panel-heading-up">
+							<span class="glyphicon glyphicon-chevron-up" style=" " aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="panel-body panel-body-up">
+					<div style="overflow:auto;width:100%;max-height: 200px;">
+						<table class="table table-hover" id="financialStats">
+						</table>
+					</div>
+          <div class="cutLine"></div>
+					<div class="col-xs-12 col-md-6">
+						<span>财务费用:</span>
+						<span>0</span>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<span>总抽水:</span>
+						<span>0</span>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<span>包费:</span>
+						<span>0</span>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<span>人头费:</span>
+						<span>0</span>
+					</div>
+          <div class="col-xs-12 col-md-6">
+						<span>暗扣:</span>
+						<span>0</span>
+					</div>
+          <div class="col-xs-12 col-md-6">
+						<span>总计:</span>
+						<span>0</span>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<!-- Default panel contents -->
+				<div class="panel-heading">财务统计报表设置
+					<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="panel-body panel-body-down">
+					<div class="col-xs-12 col-md-3">
+						<button class="btn btn-default" type="submit">清空财务统计</button>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<button class="btn btn-default" type="submit">刷新财务列表</button>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<button class="btn btn-default" type="submit">发送财务到微信</button>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<button class="btn btn-default" type="submit">清空所有数据，仅保留用户当前积分</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<!-- Default panel contents -->
+				<div class="panel-heading">玩家统计信息报表
+					<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="panel-body panel-body-down">
+
+					<div class="input-group">
+						<input id="searchName" type="text" class="form-control" placeholder="搜索" data-toggle="tooltip" data-placement="bottom" title="请输入名称，模糊查询">
+					</div>
+					<div style="overflow:auto;width:100%;max-height: 200px;">
+						<table class="table table-hover" id="palyerStats">
+						</table>
+					</div>
+					<div class="cutLine"></div>
+					<div class="col-xs-12 col-md-6">
+						<span>押注:</span>
+						<span>0</span>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<span>盈亏:</span>
+						<span>0</span>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<span>上分:</span>
+						<span>0</span>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<span>下分:</span>
+						<span>0</span>
+					</div>
+          <div class="col-xs-12 col-md-6">
+						<span>上下分合计:</span>
+						<span>0</span>
+					</div>
+          <div class="col-xs-12 col-md-6">
+						<span>总分:</span>
+						<span>0</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default" style="width: 100%;">
+				<!-- Default panel contents -->
+				<div class="panel-heading">玩家统计信息报表设置
+					<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="panel-body panel-body-down">
+					<div class="col-xs-12 col-md-6">
+						<button class="btn btn-default" type="submit">导出玩家信息统计报表</button>
+					</div>
+
+					<div class="col-xs-12 col-md-6">
+						<button class="btn btn-default" type="submit">清空玩家统计信息</button>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" id="model_close_btn" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" id="model_save_btn">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/stats.js"></script>
+
+</html>`

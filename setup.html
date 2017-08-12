@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
+	<title>欢迎来到游戏中心---玩法设置</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-theme.css" />
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/main.css" />
+	<!--<link rel="stylesheet/less" type="text/css" href="main.less" />-->
+
+</head>
+
+<body>
+
+	<hander>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+			<div class="container">
+				<div class="navbar-header">
+					<a class="register_btn register_btn_min" target="_blank" style="margin-top: 8px; float: left;
+    margin-left: 1rem;" href="">保存</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" style="background-color: white;" data-target="#bs-example-navbar-collapse-1"
+						ng-click="vm.btn_top_show()">  
+						
+            <span class="sr-only">Toggle navigation</span>  
+            <span class="icon-bar"></span>  
+            <span class="icon-bar"></span>  	
+            <span class="icon-bar"></span>
+          </button>
+					<!--<a class="navbar-brand" href="#">Brand</a>-->
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+					<div style="col-xs-8 col-md-8">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">成员积分</a>
+							</li>
+							<li class="click">
+								<a href="#">玩法设置</a>
+								<p style="border-top: 1px solid white; width: 18px; margin: auto; margin-top: -11px;">
+									<p>
+							</li>
+							<li><a href="stats.html">财务统计</a></li>
+							<li><a href="award.html">积分奖励</a></li>
+							<li><a href="jackpot.html">奖池</a></li>
+						</ul>
+					</div>
+
+					<div style="col-xs-4 col-md-4">
+						<!--<button type="button" class="btn btn-default" style="margin-top: 8px; float: right;">保存</button>-->
+						<a class="register_btn register_btn_max" target="_blank" style="margin-top: 8px; float: right;" href="">保存</a>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+	</hander>
+	<div class="container">
+		<div class="row">
+			<!--设置规则一模块-->
+			<div class="col-xs-12 col-md-6">
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">规则一
+						<span class="panel-heading-up">
+							<span class="glyphicon glyphicon-chevron-up" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-up">
+						<div style="overflow:auto;width:100%;max-height: 200px;">
+							<table class="table table-hover" id="ruleOne">
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--设置规则二模块-->
+			<div class="col-xs-12 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">规则二
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+						<div style="overflow:auto;width:100%;max-height: 200px;">
+							<table class="table table-hover" id="ruleTree">
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<!--财务模块-->
+			<div class="col-xs-12 col-md-4">
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">财务
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+						<div class="row context">
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="radio" name="Pumpingtype-radio" >
+                </span>
+									<input id="profitPumping" type="text" class="form-control" placeholder="盈利抽水" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，按百分比抽水">
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="radio" name="Pumpingtype-radio">
+                </span>
+									<input id="totalPumping" type="text" class="form-control" placeholder="总注抽水" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，按百分比抽水">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon ">
+                  <input type="checkbox" >
+                </span>
+									<input id="idleWinPumping" type="text" class="form-control" placeholder="梭哈闲赢抽水" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，按百分比抽水">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+									<input id="hiddenDeduct" type="text" class="form-control" placeholder="本局暗扣" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，按元暗扣">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-12">
+								<input type="checkbox">
+								<span class="context-title" id="peoplePumping">
+                  人头抽水(设置如下)
+                </span>
+							</div>
+							<div class="col-xs-5 col-md-5">
+								<div class="input-group">
+									<input id="peoplePumping-count" type="text" class="form-control" placeholder="人数" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字">
+								</div>
+							</div>
+							<div class="col-xs-1 col-md-2">
+								<span class="context-text">×</span>
+							</div>
+							<div class="col-xs-5 col-md-5">
+
+								<div class="input-group">
+									<input id="peoplePumping-money" type="text" class="form-control" placeholder="金额" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-12">
+								<span class="context-title" id="redPacketMoney">红包费用(设置如下)</span>
+							</div>
+							<div class="col-xs-5 col-md-5">
+								<div class="input-group">
+									<input id="redPacketMoney-count" type="text" class="form-control" placeholder="人数" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字">
+								</div>
+							</div>
+							<div class="col-xs-1 col-md-2">
+								<span class="context-text">×</span>
+							</div>
+							<div class="col-xs-5 col-md-5">
+								<div class="input-group">
+									<input id="redPacketMoney-money" type="text" class="form-control" placeholder="金额" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-12">
+								<label>
+								<input type="checkbox" />
+								<span class="context-title">显示发包</span>
+								</label>
+							</div>
+
+
+
+							<div class="col-xs-12 col-md-12">
+								<label>
+								<input type="checkbox">
+								<span class="context-title">
+                  红包费用不足一元算一元
+                </span>
+								</label>
+							</div>
+
+							<div class="col-xs-12 col-md-12">
+
+								<div class="input-group">
+									<input id="financeCharges" type="text" class="form-control" placeholder="财务费用" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，单位元">
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">红包
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+						<div class="row context">
+							<div class="col-xs-12 col-md-6">
+
+								<div class="input-group">
+									<input id="grabRedPacketTimed" type="text" class="form-control" placeholder="抢红包限时" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，单位为秒数">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-12">
+								<label class="checkbox-inline">
+								<input type="checkbox">
+								<span class="context-title">
+                  显示抢包无注(玩家必须备注且五字以内)
+                </span>
+								</label>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<label class="checkbox-inline">
+								<input type="checkbox">
+								<span class="context-title">
+                  闲家无包认尾包
+                </span>
+								</label>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<label class="checkbox-inline">
+								<input type="checkbox">
+								<span class="context-title">
+                  庄家无包认尾包
+                </span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-xs-12 col-md-4">
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">押注限制
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+						<div class="row context">
+
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+									<input id="playerScore" type="text" class="form-control" placeholder="玩家积分" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字比例，按百分比">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+									<input id="bankerScore" type="text" class="form-control" placeholder="庄家积分" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字比例，按玩百分比">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+									<input id="minimumBet" type="text" class="form-control" placeholder="最低押注" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，玩家押注必须高于此分数">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+									<input id="maximalBet" type="text" class="form-control" placeholder="最高押注" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，玩家将最多只能押注此分数">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+									<input id="minimumStud" type="text" class="form-control" placeholder="最低梭哈" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，玩家积分低于此分数梭哈无效">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+									<input id="maximalStud" type="text" class="form-control" placeholder="最高梭哈" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，限制梭哈最高积分为此积分值">
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+									<input id="playerStud" type="text" class="form-control" placeholder="闲家梭哈" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，限制闲家梭哈最高积分为庄家积分的百分比">
+								</div>
+							</div>
+
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">同点比较
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+						<div class="row context">
+							<div class="col-xs-12 col-md-12">
+								<span class="context-title">
+                  庄闲同点
+                </span>
+								<select class="form-control">
+                  <option>比金额</option>
+                  <option>吃掉</option>
+                  <option>跑路</option>
+								</select>
+							</div>
+
+							<div class="col-xs-12 col-md-12">
+								<span class="context-title">
+                  同点同金额
+                </span>
+								<select class="form-control">
+                  <option>吃掉</option>
+                  <option>跑路</option>
+								</select>
+							</div>
+
+							<div class="col-xs-12 col-md-12">
+								<span class="context-title">
+                  庄闲同对子
+                </span>
+								<select class="form-control">
+                  <option>比尾数</option>
+                  <option>比金额</option>
+                  <option>闲跑路</option>
+								</select>
+							</div>
+
+							<div class="col-xs-12 col-md-12">
+								<span class="context-title">
+                  对子喝水顺序
+                </span>
+								<select class="form-control">
+                  <option>比尾数</option>
+                  <option>比金额</option>
+								</select>
+							</div>
+
+
+							<div class="col-xs-12 col-md-12">
+								<div class="input-group">
+									<input id="BankerEatIdle" type="text" class="form-control" placeholder="庄吃闲" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，庄闲同点，小于等于此点数庄吃闲">
+								</div>
+							</div>
+
+
+
+							<div class="col-xs-12 col-md-12">
+								<span class="context-title" id="samePointAmount">同点同金额，庄吃闲（包含）</span>
+							</div>
+							<div class="col-xs-5 col-md-5">
+
+								<div class="input-group">
+									<input id="samePointAmount-count" type="text" class="form-control" placeholder="人数" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字">
+								</div>
+							</div>
+							<div class="col-xs-1 col-md-2">
+								<span class="context-text">-</span>
+							</div>
+							<div class="col-xs-5 col-md-5">
+
+								<div class="input-group">
+									<input id="samePointAmount-money" type="text" class="form-control" placeholder="金额" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字">
+								</div>
+							</div>
+
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-4">
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">玩法设置
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+
+						<div class="col-xs-12 col-md-6">
+							<label class="checkbox-inline">
+							<input type="checkbox">
+							<span class="context-title" placeholder="闲家不喝水" data-toggle="tooltip" data-placement="bottom" title="庄家不够赔，庄上积分为负数">
+                  闲家不喝水
+              </span>
+              </label>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							<label class="checkbox-inline">
+							<input type="checkbox">
+							<span class="context-title">
+                  0.01免死
+              </span>
+              </label>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							<label class="checkbox-inline">
+							<input type="checkbox">
+							<span class="context-title">
+                  2.10算到顺
+              </span>
+              </label>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							<label class="checkbox-inline">
+							<input type="checkbox">
+							<span class="context-title">
+                  *.00算对子
+              </span>
+              </label>
+						</div>
+
+						<div class="col-xs-12 col-md-12">
+							<label class="checkbox-inline">
+							<input type="checkbox">
+							<span class="context-title">
+                  庄赢不翻倍
+              </span>
+              </label>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							<div class="input-group">
+								<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+								<input id="playerSuicide" type="text" class="form-control" placeholder="闲家自杀" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，闲家低于此点数，为自杀">
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							<div class="input-group">
+								<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+								<input id="thanSize" type="text" class="form-control" placeholder="比大小" data-toggle="tooltip" data-placement="bottom" title="请输入数字，闲家低于等于此分数判输">
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							<div class="input-group">
+								<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+								<input id="bankerFlatCompensate" type="text" class="form-control" placeholder="庄平赔" data-toggle="tooltip" data-placement="bottom"
+									title="请输入数字，庄家给搜哈闲家赔付此百分比">
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">玩法
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+
+						<div class="col-xs-12 col-md-6">
+							<label>
+							<input type="radio" name="playerType-radio">
+							<span class="context-title">
+                  二位数
+              </span>
+							</label>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							<label>
+							<input type="radio" name="playerType-radio">
+							<span class="context-title">
+                  三位数
+              </span>
+							</label>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">模式
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+						<div class="row context">
+							<div class="col-xs-12 col-md-6">
+
+								<label class="checkbox-inline">
+								<input type="checkbox">
+								<span class="context-title">
+                  上分模式
+                </span>
+              </label>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+
+								<label class="checkbox-inline">
+								<input type="checkbox">
+								<span class="context-title">
+                  平倍梭哈
+                </span>
+              </label>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+
+								<label class="checkbox-inline">
+								<input type="checkbox">
+								<span class="context-title">
+                  翻倍梭哈
+                </span>
+              </label>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<label class="checkbox-inline">
+								<input type="checkbox">
+								<span class="context-title">
+                  牌九模式
+                </span>
+              </label>
+							</div>
+
+							<div class="col-xs-12 col-md-12">
+								<div class="input-group">
+									<span class="input-group-addon">
+                  <input type="checkbox" >
+                </span>
+									<input id="grabBagFixedBet" type="text" class="form-control" placeholder="抢包固定押注" data-toggle="tooltip" data-placement="bottom"
+										title="请输入数字，设置抢包固定押注">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">超时限定
+						<span class="panel-heading-down">
+							<span class="glyphicon glyphicon-chevron-down" style=" " aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="panel-body panel-body-down">
+						<div class="row context">
+							<label>
+							<div class="col-xs-2 col-md-2">
+								<input type="radio" name="outTime-radio">
+							</div>
+							<div class="col-xs-10 col-md-10">
+								<span class="context-title">
+                  庄超时-大赔小平；闲超时-小赔大平；庄闲同时超时-庄家干赢一半；
+                </span>
+							</div>
+							</label>
+							<label>
+							<div class="col-xs-2 col-md-2">
+								<input type="radio" name="outTime-radio">
+							</div>
+							<div class="col-xs-10 col-md-10">
+								<span class="context-title">
+                  超时按照赔率赔付；同时超时，闲家跑路；
+                </span>
+							</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	</div>
+
+	<div>
+
+	</div>
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" id="model_close_btn" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" id="model_save_btn">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/setup.js"></script>
+
+</html>

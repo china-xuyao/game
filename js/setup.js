@@ -1,36 +1,20 @@
-(function () {
-  $(":text").keyup(function (element) {
-    var root = $(this),
-      title = root.attr("placeholder"),
-      id = root.attr("id"),
-      titleId = id + "title",
-      model = '<div id="' + titleId + '" class="input-text-title animated bounce">' + title + '</div>',
-      val = root.val();
-    if (val == null || val == "") {
 
-    } else {
-      if (!document.getElementById(titleId)) {
-        root.before(model);
-      }
-    }
+  var ruleOne = $("#ruleOne").grid({
+    columnDefs: [
+      { name: 'ID', field: 'a', display: true },
+      { name: '昵称', field: 'b', display: true },
+      { name: '积分', field: 'c', display: true }
+    ],
+    "data": [{ 'a': '123', 'b': 125778 , 'c': 125778 }, { 'a': '123', 'b': 125778 , 'c': 125778 }],
+    "parName": "ruleOne"
   });
-  $('[data-toggle="tooltip"]').tooltip()
-} ())
 
-(function (doc, win) {
-  var docEl = doc.documentElement,
-    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-    recalc = function () {
-      var clientWidth = docEl.clientWidth;
-      if (!clientWidth) return;
-      if (clientWidth >= 640) {
-        docEl.style.fontSize = '100px';
-      } else {
-        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
-      }
-    };
+  var ruleTree = $("#ruleTree").grid({
+    columnDefs: [
+      { name: '用户名', field: 'a', display: true },
+      { name: '姓名', field: 'b', display: true }
+    ],
+    "data": [{ 'a': '123', 'b': 125778 }, { 'a': '123', 'b': 125778 }],
+    "parName": "ruleTree"
+  });
 
-  if (!doc.addEventListener) return;
-  win.addEventListener(resizeEvt, recalc, false);
-  doc.addEventListener('DOMContentLoaded', recalc, false);
-})(document, window);
