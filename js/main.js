@@ -43,7 +43,6 @@ columnDefs: [
     if (this.options.titleTemplate) {
       theadEle.append(this.options.titleTemplate(title[index]));
     } else {
-      debugger;
       var tr = "<tr>";
       var title = this.options.columnDefs;
       for (var index in title) {
